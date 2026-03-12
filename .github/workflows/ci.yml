@@ -39,7 +39,7 @@ jobs:
     - name: Installer les dépendances
       run: pip install -r requirements.txt
     - name: Execute pytest
-      run : pytest tests/ -v --cov=src
+      run : python -m pytest tests/ -v --cov=app
 
   build:
     runs-on: ubuntu-latest
@@ -54,5 +54,4 @@ jobs:
     - name: Genere package python
       run : python -m build 
     - name: Uploid resultat
-      uses: actions/upload-artifact@v3
-
+      uses: actions/upload-artifact@v6
