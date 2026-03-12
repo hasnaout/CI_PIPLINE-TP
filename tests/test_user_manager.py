@@ -3,6 +3,7 @@ import pytest
 
 from app.user_manager import UserManager
 
+
 def test_add_user():
     manager = UserManager()
     manager.add_user("adam")
